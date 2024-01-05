@@ -1,56 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20231220 22:47:05.071" rpa="false" schemaversion="4">
-<suite id="s1" name="Modelo" source="D:\Programação\robot-framework\tests\modelo.robot">
-<test id="s1-t1" name="Cenario 1: Acessando o site do robotframework" line="19">
-<kw name="Abrir Site do robotframework">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240104 21:24:12.288" rpa="false" schemaversion="4">
+<suite id="s1" name="Form" source="D:\Programação\robot-framework\tests\form.robot">
+<test id="s1-t1" name="cenario 1: Preencher formulario" line="24">
+<kw name="abrir navegador e acessar site">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://robotframework.org</arg>
+<arg>https://demo.testfire.net/login.jsp</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231220 22:47:05.218" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org'.</msg>
-<status status="PASS" starttime="20231220 22:47:05.217" endtime="20231220 22:47:08.940"/>
+<msg timestamp="20240104 21:24:12.437" level="INFO">Opening browser 'chrome' to base url 'https://demo.testfire.net/login.jsp'.</msg>
+<status status="PASS" starttime="20240104 21:24:12.437" endtime="20240104 21:24:15.442"/>
 </kw>
-<status status="PASS" starttime="20231220 22:47:05.217" endtime="20231220 22:47:08.940"/>
+<status status="PASS" starttime="20240104 21:24:12.437" endtime="20240104 21:24:15.442"/>
 </kw>
-<kw name="Fechar navegador">
+<kw name="preencher campos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_user}</arg>
+<arg>Andre</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 21:24:15.444" level="INFO">Typing text 'Andre' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20240104 21:24:15.444" endtime="20240104 21:24:15.507"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>Junior</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 21:24:15.508" level="INFO">Typing text 'Junior' into text field 'id:passw'.</msg>
+<status status="PASS" starttime="20240104 21:24:15.507" endtime="20240104 21:24:15.561"/>
+</kw>
+<status status="PASS" starttime="20240104 21:24:15.442" endtime="20240104 21:24:15.561"/>
+</kw>
+<kw name="clicar em button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 21:24:15.562" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20240104 21:24:15.562" endtime="20240104 21:24:16.020"/>
+</kw>
+<status status="PASS" starttime="20240104 21:24:15.562" endtime="20240104 21:24:16.020"/>
+</kw>
+<kw name="fechar navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231220 22:47:08.941" endtime="20231220 22:47:11.092"/>
+<status status="PASS" starttime="20240104 21:24:16.021" endtime="20240104 21:24:18.152"/>
 </kw>
-<status status="PASS" starttime="20231220 22:47:08.941" endtime="20231220 22:47:11.092"/>
+<status status="PASS" starttime="20240104 21:24:16.020" endtime="20240104 21:24:18.152"/>
 </kw>
-<status status="PASS" starttime="20231220 22:47:05.217" endtime="20231220 22:47:11.093"/>
+<status status="PASS" starttime="20240104 21:24:12.436" endtime="20240104 21:24:18.153"/>
 </test>
-<test id="s1-t2" name="Cenario 1: Acessando o site do google" line="23">
-<kw name="Abrir site do google">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.google.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231220 22:47:11.095" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20231220 22:47:11.095" endtime="20231220 22:47:14.231"/>
-</kw>
-<status status="PASS" starttime="20231220 22:47:11.094" endtime="20231220 22:47:14.231"/>
-</kw>
-<kw name="Fechar navegador">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231220 22:47:14.232" endtime="20231220 22:47:16.313"/>
-</kw>
-<status status="PASS" starttime="20231220 22:47:14.232" endtime="20231220 22:47:16.313"/>
-</kw>
-<status status="PASS" starttime="20231220 22:47:11.094" endtime="20231220 22:47:16.314"/>
-</test>
-<status status="PASS" starttime="20231220 22:47:05.072" endtime="20231220 22:47:16.315"/>
+<status status="PASS" starttime="20240104 21:24:12.290" endtime="20240104 21:24:18.153"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Modelo">Modelo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
 </suite>
 </statistics>
 <errors>
